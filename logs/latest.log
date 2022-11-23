@@ -1,37 +1,40 @@
-[18:29:51] [main/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:29:51] [main/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:29:51] [main/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:29:51] [main/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[18:29:51] [main/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[18:29:51] [main/INFO]: Reloading ResourceManager: Default
-[18:29:51] [Worker-Main-8/INFO]: Loaded 7 recipes
-[18:29:51] [Worker-Main-8/INFO]: Loaded 927 advancements
-[18:29:52] [Server thread/INFO]: Starting minecraft server version 1.16.4
-[18:29:52] [Server thread/INFO]: Loading properties
-[18:29:52] [Server thread/INFO]: Default game type: SURVIVAL
-[18:29:52] [Server thread/INFO]: Generating keypair
-[18:29:52] [Server thread/INFO]: Starting Minecraft server on *:25565
-[18:29:52] [Server thread/INFO]: Using default channel type
-[18:29:52] [Server thread/INFO]: Preparing level "world"
-[18:29:52] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[18:29:53] [Server thread/INFO]: Preparing spawn area: 0%
-[18:29:53] [Server thread/INFO]: Preparing spawn area: 0%
-[18:29:53] [Server thread/INFO]: Time elapsed: 1206 ms
-[18:29:53] [Server thread/INFO]: Done (1.250s)! For help, type "help"
-[18:29:53] [Server thread/INFO]: Starting remote control listener
-[18:29:53] [Server thread/INFO]: Thread RCON Listener started
-[18:29:53] [Server thread/INFO]: RCON running on 0.0.0.0:25575
-[18:32:10] [Server thread/INFO]: Stopping the server
-[18:32:10] [Server thread/INFO]: Stopping server
-[18:32:10] [Server thread/INFO]: Saving players
-[18:32:10] [Server thread/INFO]: Saving worlds
-[18:32:10] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[18:32:11] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[18:32:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
-[18:32:11] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[18:32:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
-[18:32:11] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[18:32:11] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[18:32:11] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[18:32:11] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[18:32:11] [Server thread/INFO]: Thread RCON Listener stopped
+[00:51:32] [ServerMain/INFO]: Building unoptimized datafixer
+[00:51:33] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[00:51:34] [ServerMain/INFO]: Loaded 7 recipes
+[00:51:34] [ServerMain/INFO]: Loaded 1179 advancements
+[00:51:34] [ServerMain/WARN]: Failed to parse level-type default, defaulting to minecraft:normal
+[00:51:34] [Server thread/INFO]: Starting minecraft server version 1.19.2
+[00:51:34] [Server thread/INFO]: Loading properties
+[00:51:34] [Server thread/INFO]: Default game type: SURVIVAL
+[00:51:34] [Server thread/INFO]: Generating keypair
+[00:51:35] [Server thread/INFO]: Starting Minecraft server on *:25565
+[00:51:35] [Server thread/INFO]: Using default channel type
+[00:51:35] [Server thread/INFO]: Preparing level "world"
+[00:51:35] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
+[00:51:37] [Server thread/INFO]: Time elapsed: 2332 ms
+[00:51:37] [Server thread/INFO]: Done (2.447s)! For help, type "help"
+[00:51:37] [Server thread/INFO]: Starting remote control listener
+[00:51:37] [Server thread/INFO]: Thread RCON Listener started
+[00:51:37] [Server thread/INFO]: RCON running on 0.0.0.0:25575
+[00:52:19] [User Authenticator #1/INFO]: UUID of player wrathofjo is ef10d585-1edf-46b8-9e78-ee6e3bd4b168
+[00:52:19] [Server thread/INFO]: wrathofjo[/192.168.254.47:61162] logged in with entity id 90 at (66.13560928528192, 63.0, -308.3434303874393)
+[00:52:19] [Server thread/INFO]: wrathofjo joined the game
+[00:52:36] [Server thread/INFO]: wrathofjo lost connection: Disconnected
+[00:52:36] [Server thread/INFO]: wrathofjo left the game
+[00:52:53] [Server thread/INFO]: Stopping the server
+[00:52:53] [Server thread/INFO]: Stopping server
+[00:52:53] [Server thread/INFO]: Saving players
+[00:52:53] [Server thread/INFO]: Saving worlds
+[00:52:54] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[00:52:54] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[00:52:54] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[00:52:54] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[00:52:54] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[00:52:54] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[00:52:54] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[00:52:54] [Server thread/INFO]: Thread RCON Listener stopped

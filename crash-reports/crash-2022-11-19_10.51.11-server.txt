@@ -1,0 +1,368 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 2022-11-19 10:51:11
+Description: Watching Server
+
+java.lang.Error: Watchdog
+	at java.base@19.0.1/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base@19.0.1/java.io.FileOutputStream.write(FileOutputStream.java:372)
+	at java.base@19.0.1/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base@19.0.1/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:251)
+	at java.base@19.0.1/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:239)
+	at java.base@19.0.1/java.io.PrintStream.implWrite(PrintStream.java:644)
+	at java.base@19.0.1/java.io.PrintStream.write(PrintStream.java:622)
+	at org.apache.logging.log4j.core.util.CloseShieldOutputStream.write(CloseShieldOutputStream.java:53)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.writeToDestination(OutputStreamManager.java:250)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushBuffer(OutputStreamManager.java:283)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flush(OutputStreamManager.java:294)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:199)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:417)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2040)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1907)
+	at org.apache.logging.slf4j.Log4jLogger.warn(Log4jLogger.java:243)
+	at net.minecraft.server.MinecraftServer.v(SourceFile:651)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:257)
+	at net.minecraft.server.MinecraftServer$$Lambda$4398/0x0000000801852a28.run(Unknown Source)
+	at java.base@19.0.1/java.lang.Thread.run(Thread.java:1589)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+Stacktrace:
+	at java.base@19.0.1/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base@19.0.1/java.io.FileOutputStream.write(FileOutputStream.java:372)
+	at java.base@19.0.1/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base@19.0.1/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:251)
+	at java.base@19.0.1/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:239)
+	at java.base@19.0.1/java.io.PrintStream.implWrite(PrintStream.java:644)
+	at java.base@19.0.1/java.io.PrintStream.write(PrintStream.java:622)
+	at org.apache.logging.log4j.core.util.CloseShieldOutputStream.write(CloseShieldOutputStream.java:53)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.writeToDestination(OutputStreamManager.java:250)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flushBuffer(OutputStreamManager.java:283)
+	at org.apache.logging.log4j.core.appender.OutputStreamManager.flush(OutputStreamManager.java:294)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:199)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:542)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:500)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:483)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:417)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2205)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2159)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2142)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2040)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1907)
+	at org.apache.logging.slf4j.Log4jLogger.warn(Log4jLogger.java:243)
+	at net.minecraft.server.MinecraftServer.v(SourceFile:651)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:257)
+
+-- Thread Dump --
+Details:
+	Threads: "Reference Handler" daemon prio=10 Id=8 RUNNABLE
+	at java.base@19.0.1/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+	at java.base@19.0.1/java.lang.ref.Reference.processPendingReferences(Reference.java:245)
+	at java.base@19.0.1/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:207)
+
+
+"Finalizer" daemon prio=8 Id=9 WAITING on java.lang.ref.NativeReferenceQueue$Lock@6122fd6d
+	at java.base@19.0.1/java.lang.Object.wait0(Native Method)
+	-  waiting on java.lang.ref.NativeReferenceQueue$Lock@6122fd6d
+	at java.base@19.0.1/java.lang.Object.wait(Object.java:366)
+	at java.base@19.0.1/java.lang.Object.wait(Object.java:339)
+	at java.base@19.0.1/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+	at java.base@19.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+	at java.base@19.0.1/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+	at java.base@19.0.1/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+
+"Signal Dispatcher" daemon prio=9 Id=10 RUNNABLE
+
+
+"Attach Listener" daemon prio=5 Id=11 RUNNABLE
+
+
+"Notification Thread" daemon prio=9 Id=19 RUNNABLE
+
+
+"Common-Cleaner" daemon prio=8 Id=21 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6fe50f39
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@6fe50f39
+	at java.base@19.0.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+	at java.base@19.0.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1759)
+	at java.base@19.0.1/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+	at java.base@19.0.1/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+	at java.base@19.0.1/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+	at java.base@19.0.1/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+	at java.base@19.0.1/java.lang.Thread.run(Thread.java:1589)
+	...
+
+
+"DestroyJavaVM" prio=5 Id=23 RUNNABLE
+
+
+"Timer hack thread" daemon prio=5 Id=36 TIMED_WAITING
+	at java.base@19.0.1/java.lang.Thread.sleep0(Native Method)
+	at java.base@19.0.1/java.lang.Thread.sleep(Thread.java:465)
+	at ad$9.run(SourceFile:849)
+
+
+"Worker-Main-2" daemon prio=5 Id=38 TIMED_WAITING on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1888)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1807)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Worker-Main-3" daemon prio=5 Id=39 WAITING on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1890)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1807)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Worker-Main-5" daemon prio=5 Id=41 WAITING on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1890)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1807)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Worker-Main-6" daemon prio=5 Id=42 WAITING on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1890)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1807)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Worker-Main-7" daemon prio=5 Id=43 WAITING on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.park(Native Method)
+	-  waiting on java.util.concurrent.ForkJoinPool@6bda961d
+	at java.base@19.0.1/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1890)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1807)
+	at java.base@19.0.1/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+
+"Server thread" prio=8 Id=44 RUNNABLE
+	at java.base@19.0.1/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base@19.0.1/java.io.FileOutputStream.write(FileOutputStream.java:372)
+	at java.base@19.0.1/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base@19.0.1/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:251)
+	at java.base@19.0.1/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:239)
+	at java.base@19.0.1/java.io.PrintStream.implWrite(PrintStream.java:644)
+	at java.base@19.0.1/java.io.PrintStream.write(PrintStream.java:622)
+	at org.apache.logging.log4j.core.util.CloseShieldOutputStream.write(CloseShieldOutputStream.java:53)
+	...
+
+	Number of locked synchronizers = 2
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@58674c21
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@1f3c0cd3
+
+
+"Server console handler" daemon prio=8 Id=46 RUNNABLE (in native)
+	at java.base@19.0.1/java.io.FileInputStream.readBytes(Native Method)
+	at java.base@19.0.1/java.io.FileInputStream.read(FileInputStream.java:293)
+	at java.base@19.0.1/java.io.BufferedInputStream.read1(BufferedInputStream.java:308)
+	at java.base@19.0.1/java.io.BufferedInputStream.implRead(BufferedInputStream.java:382)
+	at java.base@19.0.1/java.io.BufferedInputStream.read(BufferedInputStream.java:361)
+	at java.base@19.0.1/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:333)
+	at java.base@19.0.1/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:376)
+	at java.base@19.0.1/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:219)
+	...
+
+	Number of locked synchronizers = 3
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@20691b57
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@4ef7fa4d
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@2c13b1f6
+
+
+"Netty Server IO #0" daemon prio=5 Id=47 RUNNABLE (in native)
+	at java.base@19.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@19.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@19.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@53b66a33
+	-  locked sun.nio.ch.WEPollSelectorImpl@3b6d70b1
+	at java.base@19.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:813)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:460)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	...
+
+
+"RCON Listener #1" prio=8 Id=53 RUNNABLE (in native)
+	at java.base@19.0.1/sun.nio.ch.Net.poll(Native Method)
+	at java.base@19.0.1/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:186)
+	at java.base@19.0.1/sun.nio.ch.NioSocketImpl.timedAccept(NioSocketImpl.java:696)
+	at java.base@19.0.1/sun.nio.ch.NioSocketImpl.accept(NioSocketImpl.java:738)
+	at java.base@19.0.1/java.net.ServerSocket.implAccept(ServerSocket.java:690)
+	at java.base@19.0.1/java.net.ServerSocket.platformImplAccept(ServerSocket.java:655)
+	at java.base@19.0.1/java.net.ServerSocket.implAccept(ServerSocket.java:631)
+	at java.base@19.0.1/java.net.ServerSocket.implAccept(ServerSocket.java:588)
+	...
+
+	Number of locked synchronizers = 1
+	- java.util.concurrent.locks.ReentrantLock$NonfairSync@4ab9c003
+
+
+"Server Watchdog" daemon prio=8 Id=54 RUNNABLE
+	at java.management@19.0.1/sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at java.management@19.0.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:541)
+	at java.management@19.0.1/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:528)
+	at afk.run(SourceFile:47)
+	at java.base@19.0.1/java.lang.Thread.run(Thread.java:1589)
+
+
+"Netty Server IO #1" daemon prio=5 Id=55 RUNNABLE (in native)
+	at java.base@19.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@19.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@19.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@7b1444a3
+	-  locked sun.nio.ch.WEPollSelectorImpl@1b134e00
+	at java.base@19.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:813)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:460)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	...
+
+
+"Netty Server IO #2" daemon prio=5 Id=56 RUNNABLE (in native)
+	at java.base@19.0.1/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@19.0.1/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:114)
+	at java.base@19.0.1/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	-  locked io.netty.channel.nio.SelectedSelectionKeySet@4bab5d2b
+	-  locked sun.nio.ch.WEPollSelectorImpl@4f163585
+	at java.base@19.0.1/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:146)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:68)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:813)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:460)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:995)
+	...
+
+
+"Netty Server IO #3" daemon prio=5 Id=60 RUNNABLE
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.setMemory0(Native Method)
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.setMemory(Unsafe.java:742)
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.setMemory(Unsafe.java:753)
+	at java.base@19.0.1/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:137)
+	at java.base@19.0.1/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:342)
+	at io.netty.buffer.PoolArena$DirectArena.allocateDirect(PoolArena.java:649)
+	at io.netty.buffer.PoolArena$DirectArena.newChunk(PoolArena.java:624)
+	at io.netty.buffer.PoolArena.allocateNormal(PoolArena.java:203)
+	...
+
+
+"Netty Server IO #4" daemon prio=5 Id=61 RUNNABLE
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.setMemory0(Native Method)
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.setMemory(Unsafe.java:742)
+	at java.base@19.0.1/jdk.internal.misc.Unsafe.setMemory(Unsafe.java:753)
+	at java.base@19.0.1/java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:137)
+	at java.base@19.0.1/java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:342)
+	at io.netty.buffer.PoolArena$DirectArena.allocateDirect(PoolArena.java:649)
+	at io.netty.buffer.PoolArena$DirectArena.newChunk(PoolArena.java:624)
+	at io.netty.buffer.PoolArena.allocateNormal(PoolArena.java:203)
+	...
+
+
+"RCON Client /192.168.254.47 #3" prio=8 Id=63 RUNNABLE
+	at java.base@19.0.1/java.nio.ByteBuffer.clear(ByteBuffer.java:1578)
+	at java.base@19.0.1/java.nio.ByteBuffer.clear(ByteBuffer.java:267)
+	at org.apache.logging.log4j.core.layout.TextEncoderHelper.writeEncodedText(TextEncoderHelper.java:97)
+	at org.apache.logging.log4j.core.layout.TextEncoderHelper.encodeText(TextEncoderHelper.java:65)
+	at org.apache.logging.log4j.core.layout.StringBuilderEncoder.encode(StringBuilderEncoder.java:68)
+	at org.apache.logging.log4j.core.layout.StringBuilderEncoder.encode(StringBuilderEncoder.java:32)
+	at org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:228)
+	at org.apache.logging.log4j.core.layout.PatternLayout.encode(PatternLayout.java:60)
+	...
+
+
+
+Stacktrace:
+	at afk.run(SourceFile:63)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+-- Performance stats --
+Details:
+	Random tick rate: 3
+	Level stats: ResourceKey[minecraft:dimension / minecraft:overworld]: players: 0, entities: 133,133,71,529,529,0,0 [minecraft:falling_block:39,minecraft:rabbit:24,minecraft:pig:20,minecraft:sheep:15,minecraft:chicken:12], block_entities: 16 [minecraft:mob_spawner:13,minecraft:beehive:2,minecraft:furnace:1], block_ticks: 21, fluid_ticks: 11, chunk_source: Chunks[S] W: 2209 E: 133,133,71,529,529,0,0,
+ResourceKey[minecraft:dimension / minecraft:the_nether]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0,
+ResourceKey[minecraft:dimension / minecraft:the_end]: players: 0, entities: 0,0,0,0,0,0,0 [], block_entities: 0 [], block_ticks: 0, fluid_ticks: 0, chunk_source: Chunks[S] W: 0 E: 0,0,0,0,0,0,0
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 19.0.1, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 451286480 bytes (430 MiB) / 1566572544 bytes (1494 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 13
+	Microarchitecture: Coffee Lake
+	Frequency (GHz): 3.60
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 8
+	Graphics card #0 name: NVIDIA GeForce RTX 3080
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x220a
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.2225
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Memory slot #2 capacity (MB): 8192.00
+	Memory slot #2 clockSpeed (GHz): 3.20
+	Memory slot #2 type: DDR4
+	Memory slot #3 capacity (MB): 8192.00
+	Memory slot #3 clockSpeed (GHz): 3.20
+	Memory slot #3 type: DDR4
+	Virtual memory max (MB): 42699.55
+	Virtual memory used (MB): 12873.30
+	Swap memory total (MB): 10000.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 2 total; -Xmx4g -Xms1g
+	Server Running: true
+	Player Count: 0 / 20; []
+	Data Packs: vanilla
+	World Generation: Stable
+	Is Modded: Probably not. Server jar signature and brand is untouched
+	Type: Dedicated Server (map_server.txt)
