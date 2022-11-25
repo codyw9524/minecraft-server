@@ -1,40 +1,48 @@
-[00:51:32] [ServerMain/INFO]: Building unoptimized datafixer
-[00:51:33] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[00:51:34] [ServerMain/INFO]: Loaded 7 recipes
-[00:51:34] [ServerMain/INFO]: Loaded 1179 advancements
-[00:51:34] [ServerMain/WARN]: Failed to parse level-type default, defaulting to minecraft:normal
-[00:51:34] [Server thread/INFO]: Starting minecraft server version 1.19.2
-[00:51:34] [Server thread/INFO]: Loading properties
-[00:51:34] [Server thread/INFO]: Default game type: SURVIVAL
-[00:51:34] [Server thread/INFO]: Generating keypair
-[00:51:35] [Server thread/INFO]: Starting Minecraft server on *:25565
-[00:51:35] [Server thread/INFO]: Using default channel type
-[00:51:35] [Server thread/INFO]: Preparing level "world"
-[00:51:35] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[00:51:37] [Worker-Main-3/INFO]: Preparing spawn area: 0%
-[00:51:37] [Server thread/INFO]: Time elapsed: 2332 ms
-[00:51:37] [Server thread/INFO]: Done (2.447s)! For help, type "help"
-[00:51:37] [Server thread/INFO]: Starting remote control listener
-[00:51:37] [Server thread/INFO]: Thread RCON Listener started
-[00:51:37] [Server thread/INFO]: RCON running on 0.0.0.0:25575
-[00:52:19] [User Authenticator #1/INFO]: UUID of player wrathofjo is ef10d585-1edf-46b8-9e78-ee6e3bd4b168
-[00:52:19] [Server thread/INFO]: wrathofjo[/192.168.254.47:61162] logged in with entity id 90 at (66.13560928528192, 63.0, -308.3434303874393)
-[00:52:19] [Server thread/INFO]: wrathofjo joined the game
-[00:52:36] [Server thread/INFO]: wrathofjo lost connection: Disconnected
-[00:52:36] [Server thread/INFO]: wrathofjo left the game
-[00:52:53] [Server thread/INFO]: Stopping the server
-[00:52:53] [Server thread/INFO]: Stopping server
-[00:52:53] [Server thread/INFO]: Saving players
-[00:52:53] [Server thread/INFO]: Saving worlds
-[00:52:54] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[00:52:54] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
-[00:52:54] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
-[00:52:54] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[00:52:54] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[00:52:54] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[00:52:54] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[00:52:54] [Server thread/INFO]: Thread RCON Listener stopped
+[11:51:25] [ServerMain/INFO]: Building unoptimized datafixer
+[11:51:25] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[11:51:26] [ServerMain/INFO]: Loaded 7 recipes
+[11:51:26] [ServerMain/INFO]: Loaded 1179 advancements
+[11:51:27] [ServerMain/WARN]: Failed to parse level-type default, defaulting to minecraft:normal
+[11:51:27] [Server thread/INFO]: Starting minecraft server version 1.19.2
+[11:51:27] [Server thread/INFO]: Loading properties
+[11:51:27] [Server thread/INFO]: Default game type: SURVIVAL
+[11:51:27] [Server thread/INFO]: Generating keypair
+[11:51:27] [Server thread/INFO]: Starting Minecraft server on *:25565
+[11:51:27] [Server thread/INFO]: Using default channel type
+[11:51:27] [Server thread/INFO]: Preparing level "world"
+[11:51:27] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[11:51:29] [Worker-Main-1/INFO]: Preparing spawn area: 0%
+[11:51:29] [Worker-Main-6/INFO]: Preparing spawn area: 0%
+[11:51:29] [Worker-Main-6/INFO]: Preparing spawn area: 0%
+[11:51:29] [Worker-Main-5/INFO]: Preparing spawn area: 0%
+[11:51:29] [Worker-Main-1/INFO]: Preparing spawn area: 1%
+[11:51:29] [Server thread/INFO]: Time elapsed: 2369 ms
+[11:51:29] [Server thread/INFO]: Done (2.572s)! For help, type "help"
+[11:51:29] [Server thread/INFO]: Starting remote control listener
+[11:51:29] [Server thread/INFO]: Thread RCON Listener started
+[11:51:29] [Server thread/INFO]: RCON running on 0.0.0.0:25575
+[11:52:22] [User Authenticator #1/INFO]: UUID of player wrathofjo is ef10d585-1edf-46b8-9e78-ee6e3bd4b168
+[11:52:22] [Server thread/INFO]: wrathofjo[/192.168.254.47:64882] logged in with entity id 91 at (63.65549110497816, 63.0, -308.07529737967786)
+[11:52:22] [Server thread/INFO]: wrathofjo joined the game
+[11:53:58] [User Authenticator #2/INFO]: UUID of player muffin_burger7 is 1f3bd3d0-f971-4f10-a717-859e4df84cfb
+[11:53:58] [Server thread/INFO]: muffin_burger7[/192.168.254.141:54481] logged in with entity id 1379 at (66.97476686468707, 67.875, -311.33715546271185)
+[11:53:58] [Server thread/INFO]: muffin_burger7 joined the game
+[11:54:37] [Server thread/INFO]: muffin_burger7 has made the advancement [Getting an Upgrade]
+[12:04:12] [Server thread/INFO]: muffin_burger7 has made the advancement [We Need to Go Deeper]
+[12:06:17] [Server thread/INFO]: muffin_burger7 has made the advancement [Eye Spy]
+[12:18:53] [Server thread/INFO]: muffin_burger7 lost connection: Disconnected
+[12:18:53] [Server thread/INFO]: muffin_burger7 left the game
+[12:18:54] [Server thread/INFO]: wrathofjo lost connection: Disconnected
+[12:18:54] [Server thread/INFO]: wrathofjo left the game
+[12:19:01] [Server thread/INFO]: Stopping the server
+[12:19:01] [Server thread/INFO]: Stopping server
+[12:19:01] [Server thread/INFO]: Saving players
+[12:19:01] [Server thread/INFO]: Saving worlds
+[12:19:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[12:19:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[12:19:02] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[12:19:02] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[12:19:02] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12:19:02] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12:19:02] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[12:19:02] [Server thread/INFO]: Thread RCON Listener stopped
